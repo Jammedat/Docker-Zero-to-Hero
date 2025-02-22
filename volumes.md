@@ -33,6 +33,17 @@ For example:
 ```
 docker run -it -v <volume_name>:/data <image_name> /bin/bash
 ```
+Or:
+
+```
+docker run -d --mount type=volume,source=<volume_name>,target=/app <image_name>
+```
+
+If you are using GitBash on Windows then:
+
+```
+MSYS_NO_PATHCONV=1 docker run -d --mount type=volume,source=<volume_name>,target=/app <image_name>
+```
 
 This command will mount the volume <volume_name> to the /data directory in the container. Any data written to the /data directory
 inside the container will be persisted in the volume on the host file system.
