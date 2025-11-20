@@ -1,0 +1,22 @@
+services:
+  web:
+    container_name: php_host
+    image: php:8.1.33-apache
+    ports:
+      - "8083:80"
+    volumes:
+      - /var/www/html:/var/www/html
+
+  DB:
+    container_name: mysql_host
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ITSjustapass
+      MYSQL_DATABASE: database_host
+      MYSQL_PASSWORD: PASS@111  
+      MYSQL_USER: ram
+    
