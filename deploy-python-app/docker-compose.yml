@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    image: nautilus/python-app
+    container_name: pythonapp_nautilus
+    ports:
+      - "8093:6100"
