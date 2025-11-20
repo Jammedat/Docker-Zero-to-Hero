@@ -18,6 +18,8 @@ There are many arguments which you can pass to this command for example,
 
 `docker run -d` -> Run container in background and print container ID
 `docker run -p` -> Port mapping
+`docker run -d -p 8089:80 --name cluster nginx:alpine`
+Here 8089 is host port which is mapped to container port 80
 
 use `docker run --help` to look into more arguments.
 
